@@ -10,6 +10,11 @@ do {} until (Elevate-Privileges SeTakeOwnershipPrivilege)
 
 Write-Output "Uninstalling default apps"
 # "Microsoft.MicrosoftOfficeHub" is a 'Ad' for Office 365
+# "OneConnect": is the "Paid WiFi" Microsoft app and should be removed. https://www.reddit.com/r/SCCM/comments/4vym2b/windows_10_preinstalled_apps/
+#
+# Muaddib: Keep OneNote
+# Muaddib: Keep SkypeApp and just in case it dependent People
+# Muaddib: Keep XBox due to minecraft
 $apps = @(
     # default Windows 10 apps
     "Microsoft.3DBuilder"
@@ -24,7 +29,7 @@ $apps = @(
     "Microsoft.MicrosoftSolitaireCollection"
     "Microsoft.MicrosoftStickyNotes"
     #"Microsoft.Office.OneNote"
-    #"Microsoft.OneConnect"
+    "Microsoft.OneConnect"
     #"Microsoft.People"
     #"Microsoft.SkypeApp"
     #"Microsoft.Windows.Photos"
@@ -35,21 +40,19 @@ $apps = @(
     "Microsoft.WindowsPhone"
     "Microsoft.WindowsSoundRecorder"
     #"Microsoft.WindowsStore"
-    "Microsoft.XboxApp"
+    #"Microsoft.XboxApp"
     "Microsoft.ZuneMusic"
     "Microsoft.ZuneVideo"
     "microsoft.windowscommunicationsapps"
     #"Microsoft.MinecraftUWP"
     "Microsoft.MicrosoftPowerBIForWindows"
     "Microsoft.NetworkSpeedTest"
-    "Microsoft.WindowsDVDPlayer"
-
+    
     # Threshold 2 apps
     "Microsoft.CommsPhone"
     "Microsoft.ConnectivityStore"
     "Microsoft.Messaging"
     "Microsoft.Office.Sway"
-    "Microsoft.OneConnect"
     "Microsoft.WindowsFeedbackHub"
 
 
