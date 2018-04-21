@@ -1,6 +1,9 @@
 Alex edited remove and added get-installed-apps
 only used d:\Development\GitHub\arberg-Debloat-Windows-10\scripts\remove-default-apps.ps1 
 
+See also branch
+https://github.com/StefanScherer/Debloat-Windows-10.git
+
 other interesting stuff
 * disable-windows-defender
 * optimize-user-interface (last I tested mouse it seem to be 100% dpi OK by default after win 10 install)
